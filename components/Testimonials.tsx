@@ -49,7 +49,7 @@ function TestimonialCard({ t, i, progress }: { t: typeof testimonials[0], i: num
     const isRightAligned = t.alignment === "right";
 
     return (
-        <div className="relative h-[120vh] flex items-center mb-0 last:mb-0 first:mt-0">
+        <div className="relative mb-20 md:mb-32">
             {/* Center Dot Indicator */}
             <div className="absolute left-1/2 top-1/2 w-4 h-4 bg-gray-900 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10 hidden md:block" />
 

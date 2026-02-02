@@ -68,21 +68,30 @@ export default function KitchenSequence() {
             setIsLoading(true);
             const isMobile = window.innerWidth < 768;
             const basePath = isMobile ? "/framesmobile/" : "/sequence/";
-            const loadedImages: HTMLImageElement[] = [];
+
+            // Pre-allocate array to preserve order
+            const promises: Promise<HTMLImageElement | null>[] = [];
 
             for (let i = 0; i < FRAME_COUNT; i++) {
-                const img = new Image();
-                const filename = `ezgif-frame-${(i + 1).toString().padStart(3, '0')}.jpg`;
-                img.src = `${basePath}${filename}`;
-
-                await new Promise((resolve) => {
-                    img.onload = resolve;
-                    img.onerror = resolve; // Continue even if error to avoid hanging
-                });
-                loadedImages.push(img);
+                promises.push(new Promise((resolve) => {
+                    const img = new Image();
+                    const filename = `ezgif-frame-${(i + 1).toString().padStart(3, '0')}.jpg`;
+                    img.src = `${basePath}${filename}`;
+                    img.onload = () => resolve(img);
+                    img.onerror = () => resolve(null);
+                }));
             }
 
-            setImages(loadedImages);
+            // Load all images in parallel
+            const results = await Promise.all(promises);
+
+            // Filter out any failed loads but keep the array structure valid? 
+            // Actually, for a sequence, we need contiguous frames. 
+            // If one fails, we might just have a hole, but filtering removes it entirely shifting animation.
+            // Let's filter nulls.
+            const validImages = results.filter((img): img is HTMLImageElement => img !== null);
+
+            setImages(validImages);
             setIsLoading(false);
         };
 
