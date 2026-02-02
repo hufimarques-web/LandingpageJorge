@@ -43,8 +43,8 @@ function TestimonialCard({ t, i, progress }: { t: typeof testimonials[0], i: num
     const start = i * 0.3;
     const end = start + 0.3;
 
-    const opacity = useTransform(progress, [start, start + 0.05, end - 0.05, end], [0.3, 1, 1, 0.3]);
-    const scale = useTransform(progress, [start, start + 0.05, end - 0.05, end], [0.95, 1, 1, 0.95]);
+    const opacity = useTransform(progress, [start, start + 0.05, end - 0.01, end], [0.3, 1, 1, 0.3]);
+    const scale = useTransform(progress, [start, start + 0.05, end - 0.01, end], [0.95, 1, 1, 0.95]);
 
     const isRightAligned = t.alignment === "right";
 
