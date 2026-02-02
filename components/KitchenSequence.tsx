@@ -159,14 +159,21 @@ export default function KitchenSequence() {
     return (
         <div id="inicio" ref={containerRef} className="h-[500vh] relative bg-[#050505]">
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+                {/* Show first frame immediately so it's not a black screen */}
+                <img
+                    src={images.length > 0 ? images[0].src : (typeof window !== 'undefined' && window.innerWidth < 768 ? "/framesmobile/ezgif-frame-001.jpg" : "/sequence/ezgif-frame-001.jpg")}
+                    alt="Kitchen Start"
+                    className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}
+                />
+
                 {isLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center text-white z-50">
-                        <span className="animate-pulse tracking-widest uppercase text-sm">Carregando Experiência...</span>
+                    <div className="absolute inset-0 flex items-center justify-center text-white z-50 bg-black/20 backdrop-blur-[2px]">
+                        <span className="animate-pulse tracking-widest uppercase text-xs md:text-sm font-medium drop-shadow-md">A carregar experiência...</span>
                     </div>
                 )}
                 <canvas
                     ref={canvasRef}
-                    className="w-full h-full object-cover scale-105"
+                    className="w-full h-full object-cover scale-105 relative z-10"
                 />
 
                 {/* Scrollytelling Overlays */}
