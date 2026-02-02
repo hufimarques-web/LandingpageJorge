@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, useSpring, motion } from "framer-motion";
+import NextImage from "next/image";
 
 const FRAME_COUNT = 144;
 
@@ -160,11 +161,25 @@ export default function KitchenSequence() {
         <div id="inicio" ref={containerRef} className="h-[500vh] relative bg-[#050505]">
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
                 {/* Show first frame immediately so it's not a black screen */}
-                <img
-                    src={images.length > 0 ? images[0].src : (typeof window !== 'undefined' && window.innerWidth < 768 ? "/framesmobile/ezgif-frame-001.jpg" : "/sequence/ezgif-frame-001.jpg")}
-                    alt="Kitchen Start"
-                    className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}
-                />
+                {/* We use a simple default for SSR consistency, then update on mount if needed */}
+                <div
+                    className={`absolute inset-0 z-0 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}
+                >
+                    <NextImage
+                        src="/framesmobile/ezgif-frame-001.jpg"
+                        alt="Kitchen Start Mobile"
+                        fill
+                        className="object-cover md:hidden"
+                        priority
+                    />
+                    <NextImage
+                        src="/sequence/ezgif-frame-001.jpg"
+                        alt="Kitchen Start Desktop"
+                        fill
+                        className="object-cover hidden md:block"
+                        priority
+                    />
+                </div>
 
                 {isLoading && (
                     <div className="absolute inset-0 flex items-center justify-center text-white z-50 bg-black/20 backdrop-blur-[2px]">
