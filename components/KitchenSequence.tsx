@@ -163,7 +163,7 @@ export default function KitchenSequence() {
                 {/* Show first frame immediately so it's not a black screen */}
                 {/* We use a simple default for SSR consistency, then update on mount if needed */}
                 <div
-                    className={`absolute inset-0 z-0 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 z-20 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}
                 >
                     <NextImage
                         src="/framesmobile/ezgif-frame-001.jpg"
