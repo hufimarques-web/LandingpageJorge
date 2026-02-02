@@ -162,7 +162,7 @@ export default function CTA() {
                                             <Calendar className="w-4 h-4 md:w-5 md:h-5 text-white" />
                                         </div>
                                     </div>
-                                    <div className="text-xl md:text-3xl font-black text-white mb-1">15+</div>
+                                    <div className="text-xl md:text-3xl font-black text-white mb-1">5+</div>
                                     <div className="text-[10px] md:text-sm text-gray-300 font-medium leading-tight">Anos Exp.</div>
                                 </div>
 
