@@ -180,7 +180,7 @@ export default function CTA() {
                             {/* CTA Button */}
                             <div className="pt-2 md:pt-8 mb-6 md:mb-0">
                                 <a
-                                    href="https://wa.me/351912050979?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento."
+                                    href="https://wa.me/351961455997?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group relative transition-transform duration-300 hover:scale-105 active:scale-95 w-full md:w-auto inline-block"
