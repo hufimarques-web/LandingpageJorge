@@ -86,14 +86,26 @@ export default function CTA() {
                         clipPath: clipPath
                     }}
                 >
-                    {/* Background Image */}
+                    {/* Desktop Background Image */}
                     <div
-                        className="absolute inset-0"
+                        className="absolute inset-0 hidden md:block"
                         style={{
                             backgroundImage: "url('/cta-construction.png')",
                             backgroundPosition: "center center",
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "168%",
+                            transform: `scale(${scale})`
+                        }}
+                    />
+
+                    {/* Mobile Background Image */}
+                    <div
+                        className="absolute inset-0 md:hidden"
+                        style={{
+                            backgroundImage: "url('/cta-construction-mobile.jpg')",
+                            backgroundPosition: "center center",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
                             transform: `scale(${scale})`
                         }}
                     />
