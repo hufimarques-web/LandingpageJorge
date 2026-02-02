@@ -121,8 +121,10 @@ export default function KitchenSequence() {
             canvas.width = images[0].naturalWidth || 1920;
             canvas.height = images[0].naturalHeight || 1080;
         } else {
-            canvas.width = 1920;
-            canvas.height = 1080;
+            // Default based on device
+            const isMobile = window.innerWidth < 768;
+            canvas.width = isMobile ? 1080 : 1920;
+            canvas.height = isMobile ? 1920 : 1080;
         }
 
         const render = () => {
@@ -163,7 +165,7 @@ export default function KitchenSequence() {
                 {/* Show first frame immediately so it's not a black screen */}
                 {/* We use a simple default for SSR consistency, then update on mount if needed */}
                 <div
-                    className={`absolute inset-0 z-20 transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 z-20 pointer-events-none transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0'}`}
                 >
                     <NextImage
                         src="/framesmobile/ezgif-frame-001.jpg"
