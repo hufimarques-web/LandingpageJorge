@@ -171,7 +171,7 @@ export default function KitchenSequence() {
                                         A Arte da Renovação
                                     </p>
                                     <h2
-                                        className="text-6xl md:text-8xl font-bold tracking-tight text-center leading-[1.1] mb-8 text-white"
+                                        className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight text-center leading-[1.1] mb-8 text-white"
                                         style={{
                                             textShadow: `
                                                 1px 1px 0px rgba(0,0,0,0.2),
@@ -192,7 +192,7 @@ export default function KitchenSequence() {
                                 // Standard styling for other beats
                                 <>
                                     <h2
-                                        className="text-6xl md:text-8xl font-bold tracking-tight text-center mb-4 text-white"
+                                        className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight text-center mb-4 text-white"
                                         style={{
                                             textShadow: `
                                                 1px 1px 0px rgba(0,0,0,0.2),

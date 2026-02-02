@@ -30,7 +30,7 @@ export default function Philosophy() {
     return (
         <section id="filosofia" className="py-24 bg-gray-50 text-black overflow-hidden">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                     {/* Left side - Eyebrow, Heading, and Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
