@@ -65,16 +65,19 @@ export default function KitchenSequence() {
 
     useEffect(() => {
         const loadImages = async () => {
+            setIsLoading(true);
+            const isMobile = window.innerWidth < 768;
+            const basePath = isMobile ? "/framesmobile/" : "/sequence/";
             const loadedImages: HTMLImageElement[] = [];
 
             for (let i = 0; i < FRAME_COUNT; i++) {
                 const img = new Image();
                 const filename = `ezgif-frame-${(i + 1).toString().padStart(3, '0')}.jpg`;
-                img.src = `/sequence/${filename}`;
+                img.src = `${basePath}${filename}`;
 
                 await new Promise((resolve) => {
                     img.onload = resolve;
-                    img.onerror = resolve;
+                    img.onerror = resolve; // Continue even if error to avoid hanging
                 });
                 loadedImages.push(img);
             }
