@@ -183,11 +183,7 @@ export default function KitchenSequence() {
                     />
                 </div>
 
-                {isLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center text-white z-50 bg-black/20 backdrop-blur-[2px]">
-                        <span className="animate-pulse tracking-widest uppercase text-xs md:text-sm font-medium drop-shadow-md">A carregar experiência...</span>
-                    </div>
-                )}
+                {/* Loading text removed as per user request - static image acts as placeholder */}
                 <canvas
                     ref={canvasRef}
                     className="w-full h-full object-cover scale-105 relative z-10"
