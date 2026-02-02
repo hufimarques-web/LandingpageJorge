@@ -179,7 +179,12 @@ export default function CTA() {
 
                             {/* CTA Button */}
                             <div className="pt-2 md:pt-8 mb-6 md:mb-0">
-                                <button className="group relative transition-transform duration-300 hover:scale-105 active:scale-95 w-full md:w-auto">
+                                <a
+                                    href="https://wa.me/351912050979?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento."
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative transition-transform duration-300 hover:scale-105 active:scale-95 w-full md:w-auto inline-block"
+                                >
                                     <div className="relative rounded-full p-[2px] overflow-hidden">
                                         <div className="absolute inset-0 animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#000000_0%,#FFFFFF_50%,#000000_100%)] opacity-100" style={{ animationDuration: '3s' }} />
                                         <div className="relative flex items-center justify-center gap-3 rounded-full bg-gradient-to-b from-zinc-800 to-zinc-900 px-6 py-3 md:px-8 md:py-4 backdrop-blur-3xl">
@@ -187,7 +192,7 @@ export default function CTA() {
                                             <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white transition-transform duration-300 group-hover:translate-x-1" />
                                         </div>
                                     </div>
-                                </button>
+                                </a>
                             </div>
 
                             {/* Trust Badges - Hidden on very small screens if needed, or compacted */}
