@@ -109,85 +109,81 @@ export default function CTA() {
                             transform: `translateY(${contentY}px)`
                         }}
                     >
-                        <div className="text-center text-white max-w-4xl mx-auto px-6">
-                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-wider mb-6 leading-none">
+                        <div className="text-center text-white max-w-4xl mx-auto px-4 md:px-6">
+                            <h2 className="text-3xl md:text-6xl lg:text-7xl font-black tracking-wider mb-4 md:mb-6 leading-none">
                                 PRONTO PARA
                                 <br />
                                 <span className="text-white">
-                                    RENOVAR EM AVEIRO?
+                                    RENOVAÇÕES?
                                 </span>
                             </h2>
 
-                            <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 leading-relaxed font-medium">
-                                Junte-se a dezenas de clientes em Aveiro que transformaram as suas casas,
-                                <br className="hidden md:block" />
-                                superaram expectativas e descobriram o verdadeiro potencial dos seus espaços.
+                            <p className="text-sm md:text-xl lg:text-2xl text-gray-200 mb-6 md:mb-8 leading-relaxed font-medium">
+                                Junte-se a dezenas de clientes em Aveiro que transformaram as suas casas.
                             </p>
 
                             {/* Stats Grid */}
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-12">
                                 <div className="text-center">
                                     <div className="flex justify-center mb-2">
-                                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                            <Users className="w-5 h-5 text-white" />
+                                        <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                            <Users className="w-4 h-4 md:w-5 md:h-5 text-white" />
                                         </div>
                                     </div>
-                                    <div className="text-2xl md:text-3xl font-black text-white mb-1">50+</div>
-                                    <div className="text-xs md:text-sm text-gray-300 font-medium">Clientes Satisfeitos</div>
+                                    <div className="text-xl md:text-3xl font-black text-white mb-1">50+</div>
+                                    <div className="text-[10px] md:text-sm text-gray-300 font-medium leading-tight">Clientes Felizes</div>
                                 </div>
 
                                 <div className="text-center">
                                     <div className="flex justify-center mb-2">
-                                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                            <MapPin className="w-5 h-5 text-white" />
+                                        <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                            <MapPin className="w-4 h-4 md:w-5 md:h-5 text-white" />
                                         </div>
                                     </div>
-                                    <div className="text-2xl md:text-3xl font-black text-white mb-1">Aveiro</div>
-                                    <div className="text-xs md:text-sm text-gray-300 font-medium">Projetos acompanhados localmente</div>
+                                    <div className="text-xl md:text-3xl font-black text-white mb-1">Aveiro</div>
+                                    <div className="text-[10px] md:text-sm text-gray-300 font-medium leading-tight">Local</div>
                                 </div>
 
                                 <div className="text-center">
                                     <div className="flex justify-center mb-2">
-                                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                            <Calendar className="w-5 h-5 text-white" />
+                                        <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                            <Calendar className="w-4 h-4 md:w-5 md:h-5 text-white" />
                                         </div>
                                     </div>
-                                    <div className="text-2xl md:text-3xl font-black text-white mb-1">15+</div>
-                                    <div className="text-xs md:text-sm text-gray-300 font-medium">Anos de Experiência</div>
+                                    <div className="text-xl md:text-3xl font-black text-white mb-1">15+</div>
+                                    <div className="text-[10px] md:text-sm text-gray-300 font-medium leading-tight">Anos Exp.</div>
                                 </div>
 
                                 <div className="text-center">
                                     <div className="flex justify-center mb-2">
-                                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                            <Trophy className="w-5 h-5 text-white" />
+                                        <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                            <Trophy className="w-4 h-4 md:w-5 md:h-5 text-white" />
                                         </div>
                                     </div>
-                                    <div className="text-2xl md:text-3xl font-black text-white mb-1">100%</div>
-                                    <div className="text-xs md:text-sm text-gray-300 font-medium">Satisfação Garantida</div>
+                                    <div className="text-xl md:text-3xl font-black text-white mb-1">100%</div>
+                                    <div className="text-[10px] md:text-sm text-gray-300 font-medium leading-tight">Garantia</div>
                                 </div>
                             </div>
 
                             {/* CTA Button */}
-                            <div className="pt-8">
-                                <button className="group relative transition-transform duration-300 hover:scale-105 active:scale-95">
+                            <div className="pt-2 md:pt-8 mb-6 md:mb-0">
+                                <button className="group relative transition-transform duration-300 hover:scale-105 active:scale-95 w-full md:w-auto">
                                     <div className="relative rounded-full p-[2px] overflow-hidden">
                                         <div className="absolute inset-0 animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#000000_0%,#FFFFFF_50%,#000000_100%)] opacity-100" style={{ animationDuration: '3s' }} />
-                                        <div className="relative flex items-center gap-3 rounded-full bg-gradient-to-b from-zinc-800 to-zinc-900 px-8 py-4 backdrop-blur-3xl">
-                                            <span className="text-lg font-bold uppercase tracking-wider text-white">PEDIR ORÇAMENTO GRÁTIS</span>
-                                            <ArrowRight className="h-5 w-5 text-white transition-transform duration-300 group-hover:translate-x-1" />
+                                        <div className="relative flex items-center justify-center gap-3 rounded-full bg-gradient-to-b from-zinc-800 to-zinc-900 px-6 py-3 md:px-8 md:py-4 backdrop-blur-3xl">
+                                            <span className="text-sm md:text-lg font-bold uppercase tracking-wider text-white">PEDIR ORÇAMENTO</span>
+                                            <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white transition-transform duration-300 group-hover:translate-x-1" />
                                         </div>
                                     </div>
                                 </button>
                             </div>
 
-                            {/* Trust Badges */}
-                            <div className="mt-12 pt-6 border-t border-white/20">
-                                <p className="text-xs text-gray-400 mb-3 font-medium">CONFIADO POR DEZENAS DE CLIENTES EM AVEIRO</p>
-                                <div className="flex flex-wrap justify-center items-center gap-4 text-gray-300">
-                                    <span className="text-xs font-semibold">🏠 RENOVAÇÕES COMPLETAS</span>
-                                    <span className="text-xs font-semibold">⚡ PRAZOS CUMPRIDOS</span>
-                                    <span className="text-xs font-semibold">💎 QUALIDADE PREMIUM</span>
-                                    <span className="text-xs font-semibold">📞 ORÇAMENTO GRATUITO</span>
+                            {/* Trust Badges - Hidden on very small screens if needed, or compacted */}
+                            <div className="mt-4 md:mt-12 pt-4 md:pt-6 border-t border-white/20">
+                                <p className="text-[10px] md:text-xs text-gray-400 mb-2 md:mb-3 font-medium">CONFIANÇA & QUALIDADE</p>
+                                <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 text-gray-300">
+                                    <span className="text-[10px] md:text-xs font-semibold">🏠 RENOVAÇÕES</span>
+                                    <span className="text-[10px] md:text-xs font-semibold">⚡ PRAZOS</span>
                                 </div>
                             </div>
                         </div>
