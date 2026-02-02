@@ -183,7 +183,7 @@ export default function KitchenSequence() {
                     />
                 </div>
 
-                {/* Loading text removed as per user request - static image acts as placeholder */}
+                {/* Loading text removed - forcing HMR update */}
                 <canvas
                     ref={canvasRef}
                     className="w-full h-full object-cover scale-105 relative z-10"
