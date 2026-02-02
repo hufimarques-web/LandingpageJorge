@@ -166,7 +166,7 @@ export default function KitchenSequence() {
                         <motion.div
                             key={beat.id}
                             style={{ opacity: beat.opacity }}
-                            className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 mix-blend-overlay"
+                            className="absolute inset-0 flex flex-col items-center justify-center pt-32 md:pt-0 text-center px-4 mix-blend-overlay"
                         >
                             {beat.id === "beat-a" ? (
                                 <div className="flex flex-col items-center max-w-5xl mx-auto">
