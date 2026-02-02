@@ -13,7 +13,7 @@ const testimonials = [
         title: "A Precisão do Detalhe",
         text: "A transformação da nossa cozinha superou todas as expectativas. O nível de detalhe no acabamento é impressionante. Cada canto foi pensado para funcionalidade sem sacrificar a beleza.",
         rating: 5,
-        image: "/kitchen-transformation-v2.png", // New Ref
+        image: "/testimonial-ana.jpg",
         alignment: "right"
     },
     {
@@ -23,7 +23,7 @@ const testimonials = [
         title: "Visão Minimalista",
         text: "Profissionalismo do início ao fim. A equipa entendeu perfeitamente a nossa visão de luxo minimalista. Transformaram um espaço datado numa obra de arte moderna.",
         rating: 5,
-        image: "/cta-construction.png", // Placeholder
+        image: "/testimonial-carlos.jpg",
         alignment: "left"
     },
     {
@@ -33,7 +33,7 @@ const testimonials = [
         title: "O Coração da Casa",
         text: "Os materiais selecionados são de altíssima qualidade. O nosso espaço gourmet é agora o coração da casa, onde recebemos amigos e família com orgulho.",
         rating: 5,
-        image: "/philosophy-illustration.png", // Placeholder
+        image: "/testimonial-mariana.jpg",
         alignment: "right"
     },
 ];
